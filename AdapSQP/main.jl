@@ -36,7 +36,7 @@ using DelimitedFiles
 using Random
 using Distributions
 
-cd("/Users/senna/course/Mihai/pro6/simu/code/AdapSQP")
+cd("/.../AdapSQP")
 
 ######################################
 ######  Load problems    #############

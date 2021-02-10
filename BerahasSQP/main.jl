@@ -36,33 +36,7 @@ using DelimitedFiles
 using Random
 using Distributions
 
-cd("/Users/senna/course/Mihai/pro6/simu/code/BerahasSQP")
-###################################
-### Select Problems        ########
-###################################
-#=
-Problems1 = CUTEst.select(max_var=1000, min_con = 1, only_equ_con = true, objtype = "linear")
-Problems2 = CUTEst.select(max_var=1000, min_con = 1, only_equ_con = true, objtype = "quadratic")
-Problems3 = CUTEst.select(max_var=1000, min_con = 1, only_equ_con = true, objtype = "sum_of_squares")
-Problems4 = CUTEst.select(max_var=1000, min_con = 1, only_equ_con = true, objtype = "other")
-Problems = [Problems1; Problems2; Problems3; Problems4]
-Prob = []
-for prob in Problems
-    nlp = CUTEstModel(prob)
-    if length(nlp.meta.ifree) == nlp.meta.nvar && isempty(nlp.meta.nnet)
-        if isempty(nlp.meta.jfree) && isempty(nlp.meta.jinf) && nlp.meta.minimize
-            if length(nlp.meta.jfix) == nlp.meta.ncon
-                push!(Prob, prob)
-            end
-        end
-    end
-    finalize(nlp)
-end
-
-# write problems in a file
-writedlm(string(pwd(),"/Parameter/problems.txt"), Prob, ", ")
-=#
-
+cd("/.../BerahasSQP")
 
 ######################################
 ######  Load problems    #############
