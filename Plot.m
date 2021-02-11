@@ -199,18 +199,6 @@ for ConStep = 1:4
 %    filename = ['./Figure/TimeCon' num2str(ConStep) '.png'];
 %    print('-dpng', filename)
     
-    % Plot sampling size
-    %{
-    data = cell(5,2);
-    for sigma = 1:size(data,1)
-        Ac{sigma} = AdapCount{sigma};
-        Bc{sigma} = BerhasCCount{ConStep, sigma};
-    end
-    data = vertcat(Ac,Bc);
-    multiple_boxplot(data',xlab,{'AdapSQP', 'BerahasSQP'},col',3)
-    filename = ['./Figure/SamCon' num2str(ConStep) '.png'];
-    print('-dpng', filename)
-    %}
 end
 
 % Go over decay steps
@@ -245,18 +233,6 @@ for DecayStep = 1:2
     filename = ['./Figure/TimeDecay' num2str(DecayStep) '.png'];
     print('-dpng', filename)
     
-    % Plot sampling size
-    %{
-    data = cell(5,2);
-    for sigma = 1:size(data,1)
-        Ac{sigma} = AdapCount{sigma};
-        Bc{sigma} = BerhasCCount{DecayStep, sigma};
-    end
-    data = vertcat(Ac,Bc);
-    multiple_boxplot(data',xlab,{'AdapSQP', 'BerahasSQP'},col',3)
-    filename = ['./Figure/SamDecay' num2str(DecayStep) '.png'];
-    print('-dpng', filename)
-    %}
 end
 
 
