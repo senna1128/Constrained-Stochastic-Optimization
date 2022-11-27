@@ -5,12 +5,12 @@ Differentiable Exact Augmented Lagrangians" at https://arxiv.org/pdf/2102.05320.
 
 To use the code, please cite the paper by
 ```
-@misc{na2021adaptive,
-      title={An Adaptive Stochastic Sequential Quadratic Programming with Differentiable Exact Augmented Lagrangians}, 
-      author={Sen Na and Mihai Anitescu and Mladen Kolar},
-      year={2021},
-      eprint={2102.05320},
-      archivePrefix={arXiv},
-      primaryClass={math.OC}
+@article{na2022adaptive,
+  title={An adaptive stochastic sequential quadratic programming with differentiable exact augmented lagrangians},
+  author={Na, Sen and Anitescu, Mihai and Kolar, Mladen},
+  journal={Mathematical Programming},
+  pages={1--71},
+  year={2022},
+  publisher={Springer}
 }
 ```
